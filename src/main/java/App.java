@@ -11,21 +11,38 @@ public class App {
 
     get("/", (request, response) -> {
       HashMap model = new HashMap();
+      model.put("words", request.session().attribute("words"));
       model.put("template", "templates/index.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
-    get("/result", (request, response) -> {
-      String textInput = request.queryParams("textInput");
+    //<a href="/words">View Word List</a>
+    //<a href="/words/new">Add a New Word</a>
 
-      //call business logic functions here
-      String result = textInput;
-
-      HashMap model = new HashMap();
-      model.put("template", "templates/output.vtl");
-      model.put("result", String.format(result));
+    get("/wordlist", (request, response) -> {
+      HashMap<String, Object> model = new HashMap<String, Object>();
+      model.put("words", Word.all());
+      model.put("template", "templates/words.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
+    //<a href="/words/new">Enter a new Word</a>
+    //<a href="/words">Return to Word List</a>
+
+    get("words/new", (request, response) -> {
+      HashMap<String, Object> model = new HashMap<String, Object>();
+      model.put("template", "templates/word-form.vtl");
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
+
+    post("/words", (request, response) -> {
+      HashMap<String, Object> model = new HashMap<String, Object>();
+      String word = request.queryParams("word");
+      Word newWord = new Word("word");
+      model.put("word", newWord);
+      model.put("template", "templates/success.vtl");
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
+
       //additional pages would go here
   }
 

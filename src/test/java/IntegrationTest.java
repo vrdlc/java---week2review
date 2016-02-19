@@ -26,6 +26,15 @@ public class IntegrationTest extends FluentTest {
       goTo("http://localhost:4567/");
       assertThat(pageSource()).contains("Homemade Dictionary");
   }
+
+  @Test
+  public void wordIsCreated() {
+    goTo("http://localhost:4567/");
+    click("a", withText("Add a New Word"));
+    fill("#word").with("fish");
+    submit(".btn");
+    assertThat(pageSource()).contains("Your Word Has Been Saved");
+  }
   /*
   @Test
   public void getChange() {
