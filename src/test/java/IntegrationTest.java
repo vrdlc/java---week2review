@@ -51,7 +51,7 @@ public class IntegrationTest extends FluentTest {
     fill("#word").with("fish");
     submit(".btn");
     click("a", withText("Return to Word List"));
-    click("a", withText("fish"));
+    click("a", withText("fish")); //ERROR: StaleElementReferenceException
     click("a", withText("Add a New Definition"));
     assertThat(pageSource()).contains("Add a definition to fish");
   }
@@ -62,7 +62,7 @@ public class IntegrationTest extends FluentTest {
     fill("#word").with("fish");
     submit(".btn");
     click("a", withText("Return to Word List"));
-    click("a", withText("fish"));
+    click("a", withText("fish")); //ERROR: StaleElementReferenceException
     click("a", withText("Add a new definition"));
     fill("#definition").with("delicious");
     submit(".btn");

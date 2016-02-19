@@ -43,6 +43,8 @@ public class WordTest {
     assertEquals(Word.all().size(), 0);
   }
 
+
+
 /*
 @Test
 public void giveChange_25cents_1quarter() {
