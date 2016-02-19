@@ -1,1 +1,11 @@
 definition.vtl
+
+#if ($definition)
+  <h1>$definition.getDefinition()</h1>
+#else
+  <h1> Definition not found </h1>
+#end
+
+<a href="/definitions/new">Add another definition</a>
+<a href="/definitions">All Definitions</a>
+<a href="/words">Return to Word List</a>

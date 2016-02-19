@@ -2,7 +2,10 @@ success.vtl ()
 
 <h1>Success!</h1>
 
-<h3>Your Word Has Been Saved!</h3>
-
+#if ($word)
+  <h3>Your Word Has Been Saved!</h3>
+#elseif ($definition)
+  <h3>Your Definition Has Been Saved!<h3>
+#end
 <a href="/words/new">Add a new word</a>
 <a href="/words">Return to Word List</a>

@@ -54,8 +54,8 @@ public class App {
       model.put("template", "templates/word.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
-    //<a href="/words/$word.getId()/definitions/new">Add a New Definition</a>
-    //<a href="/words">Return to Word List</a>
+    // <a href="/words/$word.getId()/definitions/new">Add a New Definition</a>
+    // <a href="/words">Return to Word List</a>
 
     get("words/:id/definitions/new", (request, response) -> {
       HashMap<String, Object> model = new HashMap<String, Object>();
@@ -66,9 +66,54 @@ public class App {
       model.put("template", "templates/word-definition-form.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
-      //additional pages would go here
-  }
 
-  //public static 'Returntype' 'FuncName' (Paramtype param) {}  //first business logic function
+
+// START OF DEFINITION PAGES
+
+    // get("/definitions", (request, response) -> {
+    //   HashMap<String, Object> model = new HashMap<String, Object>();
+    //   model.put("definitions", Definition.all());
+    //   model.put("template", "templates/success.vtl");
+    //   return new ModelAndView(model, layout);
+    // }, new VelocityTemplateEngine());
+    //
+    // // get("definitions/new", (request, response) -> {
+    // //   HashMap<String, Object> model = new HashMap<String, Object>();
+    // //   model.put("template", "templates/definition-form.vtl");
+    // //   return new ModelAndView(model, layout);
+    // // }, new VelocityTemplateEngine());
+    //
+    // post("/definitions", (request, response) -> {
+    //   HashMap<String, Object> model = new HashMap<String, Object>();
+    //   Word word = Word.find(Integer.parseInt(request.queryParams("wordId")));
+    //
+    //   ArrayList<Definition> definitions = word.getDefinitions();
+    //
+    //   if (definitions == null) {
+    //     definitions = new ArrayList<Definition>();
+    //     request.session().attribute("definitions", definitions);
+    //   }
+    //
+    //   String description = request.queryParams("description");
+    //   Definition newDefinition = new Definition(description);
+    //   word.addDefinition(newDefinition);
+    //   // definitions.add(newDefinition);
+    //
+    //   model.put("definitions", definitions);
+    //   model.put("word", word);
+    //   model.put("template", "templates/word.vtl");
+    //   return new ModelAndView(model, layout);
+    // }, new VelocityTemplateEngine());
+    //
+    // get("/definitions/:id", (request, response) -> {
+    //   HashMap<String, Object> model = new HashMap<String, Object>();
+    //
+    //   Definition definition = Definition.find(Integer.parseInt(request.params(":id")));
+    //   model.put("definition", definition);
+    //   model.put("template", "templates/definition.vtl");
+    //   return new ModelAndView(model, layout);
+    // }, new VelocityTemplateEngine());
+    //
+  }
 
 }

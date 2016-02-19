@@ -36,7 +36,6 @@ public class Word {
     }
   }
 
-
   public ArrayList<Definition> getDefinitions() {
     return mDefinitions;
   }

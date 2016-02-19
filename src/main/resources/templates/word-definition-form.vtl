@@ -3,13 +3,13 @@ word-definition-form.vtl
 <h2>Add a definition to $word.getDescription() </h2>
 
 <form action="/definitions" method="post">
-  <input id="definitionId" name="definitionId" type="hidden" value="$definition.getId()">
+  <input id="wordId" name="wordId" type="hidden" value="$word.getId()">
 
   <div class="form-group">
     <label for="description">Make</label>
     <input id="description" name="description" type="text" class="form-control">
   </div>
 
-  <button type="submit" class="btn btn-success">Add Word</button>
+  <button type="submit" class="btn btn-success">Add Definition</button>
 </form>
 <a href="/words">Return to Word List</a>

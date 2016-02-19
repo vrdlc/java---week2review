@@ -1,1 +1,10 @@
 definitions.vtl
+
+<h1>All Definitions</h1>
+
+<ul>
+#foreach ($definition in $definitions)
+  <a href="/definitions/$definition.getId()">$definition.getDefinition()</a>
+#end
+</ul>
+<a href="/words">Return to Word List</a>

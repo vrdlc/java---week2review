@@ -46,7 +46,7 @@ public class IntegrationTest extends FluentTest {
   }
 
   @Test
-  public void categoryTasksFormIsDisplayed() {
+  public void wordDefinitionFormIsDisplayed() {
     goTo("http://localhost:4567/words/new");
     fill("#word").with("fish");
     submit(".btn");
@@ -56,5 +56,16 @@ public class IntegrationTest extends FluentTest {
     assertThat(pageSource()).contains("Add a definition to fish");
   }
 
-
+  @Test
+  public void definitionIsAddedAndDisplayed() {
+    goTo("http://localhost:4567/words/new");
+    fill("#word").with("fish");
+    submit(".btn");
+    click("a", withText("Return to Word"));
+    click("a", withText("fish"));
+    click("a", withText("Add a new definition"));
+    fill("#definition").with("delicious");
+    submit(".btn");
+    assertThat(pageSource()).contains("delicious");
+  }
 }
