@@ -28,4 +28,11 @@ public class DefinitionTest {
     Definition myDefinition = new Definition("delicious");
     assertEquals(Definition.all().size(), myDefinition.getId());
   }
+
+  @Test
+  public void id_returnsIDsForMultipleDefinitions_true() {
+    Definition firstDefinition = new Definition("delicious");
+    Definition secondDefinition = new Definition("head clothes");
+    assertEquals(Definition.find(secondDefinition.getId()), secondDefinition);
+  }
 }
