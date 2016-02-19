@@ -31,4 +31,8 @@ public class Definition {
       return null;
     }
   }
+
+  public static void clear() {
+    definitions.clear();
+  }
 }

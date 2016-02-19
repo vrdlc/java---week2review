@@ -35,4 +35,11 @@ public class DefinitionTest {
     Definition secondDefinition = new Definition("head clothes");
     assertEquals(Definition.find(secondDefinition.getId()), secondDefinition);
   }
+
+  @Test
+  public void clear_clearsAllDefinitionsFromArrayList_true() {
+    Definition myDefinition = new Definition("delicious");
+    Definition.clear();
+    assertEquals(Definition.all().size(), 0);
+  }
 }
