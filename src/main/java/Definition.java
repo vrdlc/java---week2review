@@ -3,17 +3,17 @@ import java.util.ArrayList;
 public class Definition {
   private static ArrayList<Definition> instances = new ArrayList<Definition>();
 
-  private String mDefinition;
+  private String mDescription;
   private int mId;
 
-  public Definition(String definition) {
-    mDefinition = definition;
+  public Definition(String description) {
+    mDescription = description;
     instances.add(this);
     mId = instances.size();
   }
 
-  public String getDefinition() {
-    return mDefinition;
+  public String getDescription() {
+    return mDescription;
   }
 
   public static ArrayList<Definition> all() {

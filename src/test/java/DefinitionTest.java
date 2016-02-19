@@ -12,7 +12,7 @@ public class DefinitionTest {
   @Test
   public void definition_instantiatesWithDefinition_true() {
     Definition myDefinition = new Definition("delicious");
-    assertEquals("delicious", myDefinition.getDefinition());
+    assertEquals("delicious", myDefinition.getDescription());
   }
 
   @Test

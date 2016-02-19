@@ -61,7 +61,7 @@ public class IntegrationTest extends FluentTest {
     goTo("http://localhost:4567/words/new");
     fill("#word").with("fish");
     submit(".btn");
-    click("a", withText("Return to Word"));
+    click("a", withText("Return to Word List"));
     click("a", withText("fish"));
     click("a", withText("Add a new definition"));
     fill("#definition").with("delicious");
