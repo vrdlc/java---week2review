@@ -10,7 +10,7 @@ This dictionary creator will take words input by the user and will allow them to
 
 
 ##Setup
-######Clone the directory to your desktop. Open your terminal program and go into the "java-week1review" directory. In your terminal, run Gradle, then go to http://localhost:4567 in your browser. Enter a word into the field, click the button, and have fun!
+######Clone the directory to your desktop. Open your terminal program and go into the "java-week2review" directory. In your terminal, run Gradle, then go to http://localhost:4567 in your browser. Enter a word into the field and submit it. You will then have the chance to submit more words. When you decide to return to your Word List, click a word and you'll be able to add any definitions you like. Those definitions will be stored as long as you have your browser open. 
 
 
 #Technologies Used
