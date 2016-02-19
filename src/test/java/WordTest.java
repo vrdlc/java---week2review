@@ -36,6 +36,13 @@ public class WordTest {
     assertEquals(Word.find(secondWord.getId()), secondWord);
   }
 
+  @Test
+  public void clear_clearsAllWordsFromArrayList_true() {
+    Word myWord = new Word("fish");
+    Word.clear();
+    assertEquals(Word.all().size(), 0);
+  }
+
 /*
 @Test
 public void giveChange_25cents_1quarter() {
