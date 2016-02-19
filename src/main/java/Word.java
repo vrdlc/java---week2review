@@ -5,12 +5,15 @@ public class Word {
 
   private String mDescription;
   private int mId;
+  private String mDefinition;
+  private ArrayList<Definition> mDefinitions;
 
 
   public Word(String description) { //IS THERE A BETTER NAME FOR WORD?
     mDescription = description;
     words.add(this); //.add(this) IS PAIRED WITH .all()
     mId = words.size();
+    mDefinitions = new ArrayList<Definition>();
   }
 
   public String getDescription() { //WHY RETURN mDescription AND NOT description?
@@ -31,6 +34,15 @@ public class Word {
     } catch (IndexOutOfBoundsException e) {
       return null;
     }
+  }
+
+
+  public ArrayList<Definition> getDefinitions() {
+    return mDefinitions;
+  }
+
+  public void addDefinition(Definition definition) {
+    mDefinitions.add(definition);
   }
 
   public static void clear() {

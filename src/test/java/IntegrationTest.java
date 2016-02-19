@@ -35,21 +35,26 @@ public class IntegrationTest extends FluentTest {
     submit(".btn");
     assertThat(pageSource()).contains("Your Word Has Been Saved");
   }
-  /*
+
   @Test
-  public void getChange() {
-    goTo("http://localhost:4567");
-    fill("#userChange").with("87");
+  public void wordIsDisplayed() {
+    goTo("http://localhost:4567/words/new");
+    fill("#word").with("fish");
     submit(".btn");
-    assertThat(pageSource()).contains("Your change for 87 cents is 3 quarters, 1 dime, 2 pennies.");
+    click("a", withText("Return to Word List"));
+    assertThat(pageSource()).contains("fish");
   }
+
   @Test
-  public void negativeNumber() {
-    goTo("http://localhost:4567");
-    fill("#userChange").with("-87");
+  public void categoryTasksFormIsDisplayed() {
+    goTo("http://localhost:4567/words/new");
+    fill("#word").with("fish");
     submit(".btn");
-    assertThat(pageSource()).contains("Please enter a positive value");
+    click("a", withText("Return to Word List"));
+    click("a", withText("fish"));
+    click("a", withText("Add a New Definition"));
+    assertThat(pageSource()).contains("Add a definition to fish");
   }
-*/
+
 
 }

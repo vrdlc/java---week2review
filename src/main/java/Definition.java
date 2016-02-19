@@ -1,15 +1,15 @@
 import java.util.ArrayList;
 
 public class Definition {
-  private static ArrayList<Definition> definitions = new ArrayList<Definition>();
+  private static ArrayList<Definition> instances = new ArrayList<Definition>();
 
   private String mDefinition;
   private int mId;
 
   public Definition(String definition) {
     mDefinition = definition;
-    definitions.add(this);
-    mId = definitions.size();
+    instances.add(this);
+    mId = instances.size();
   }
 
   public String getDefinition() {
@@ -17,7 +17,7 @@ public class Definition {
   }
 
   public static ArrayList<Definition> all() {
-    return definitions;
+    return instances;
   }
 
   public int getId() {
@@ -26,13 +26,13 @@ public class Definition {
 
   public static Definition find(int id) {
     try {
-      return definitions.get(id - 1 );
+      return instances.get(id - 1);
     } catch (IndexOutOfBoundsException e) {
       return null;
     }
   }
 
   public static void clear() {
-    definitions.clear();
+    instances.clear();
   }
 }
