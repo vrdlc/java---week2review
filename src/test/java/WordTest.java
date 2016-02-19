@@ -1,7 +1,13 @@
 import org.junit.*;
 import static org.junit.Assert.*;
 
-public class UnitTest {
+public class WordTest {
+
+  @Test
+  public void word_instantiatesCorrectly_true() {
+    Word myWord = new Word();
+      assertEquals(true, myWord instanceof Word);
+  }
 
 
 
