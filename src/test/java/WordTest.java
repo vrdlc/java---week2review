@@ -15,13 +15,13 @@ public class WordTest {
     assertEquals("fish", myWord.getDescription());
   }
 
-  // @Test
-  // public void all_returnsAllInstancesOfWord_true() {
-  //   Word firstWord = new Word("fish");
-  //   Word secondWord = new Word("hat");
-  //   assertTrue(Word.all().contains(firstWord));
-  //   assertTrue(Word.add().contains(secondWord));
-  // }
+  @Test
+  public void all_returnsAllInstancesOfWord_true() {
+    Word firstWord = new Word("fish");
+    Word secondWord = new Word("hat");
+    assertTrue(Word.all().contains(firstWord));
+    assertTrue(Word.all().contains(secondWord));
+  }
 
 /*
 @Test
