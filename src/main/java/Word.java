@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 
+import java.util.Collections;
+
 public class Word {
   private static ArrayList<Word> words = new ArrayList<Word>();
 
@@ -21,8 +23,15 @@ public class Word {
   }
 
   public static ArrayList<Word> all() {
-    return words;
+      return words;
   }
+
+  // public static ArrayList<Word> sort() {
+  //   Collections.sort(words);
+  //     for(Word counter: words) {
+  //       return words;
+  //   }
+  // }
 
   public int getId() {
     return mId;

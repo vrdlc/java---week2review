@@ -1,9 +1,14 @@
-words.vtl (/words)
-
-<h1>Words</h1>
+<div class="container">
+  <div class="jumbotron indexback">
+    <h1>Words</h1>
+  </div>
+</div>
 
 #foreach($word in $words)
   <h3><a href="/words/$word.getId()">$word.getDescription()</a></h3>
 #end
-<a href="/words/new">Enter a new Word</a>
-<a href="/words">Return to Word List</a>
+
+<ul class="links text">
+  <li><a href="/words/new">Enter a new Word</a></li>
+  <li><a href="/words">Return to Word List</a></li>
+</ul>

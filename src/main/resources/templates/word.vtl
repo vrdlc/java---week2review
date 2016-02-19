@@ -1,15 +1,23 @@
-word.vtl
+<div class="jumbotron indexback">
+  <h2>Your Word List</h2>
+</div>
 
-<h3>$word.getDescription():</h3>
+<div class="row">
+  <div class="col-xs-4 .col-xs-offset-2">
+    <h3>$word.getDescription():</h3>
+  </div>
 
-#foreach($definition in $word.getDefinitions())
-  <h4>$definition.getDescription()</h4>
-#end
+  <div class="col-xs-4">
+    #foreach($definition in $word.getDefinitions())
+    <h4>$definition.getDescription()</h4>
+    #end
+  </div>
+</div>
 <ul class="links">
   <li>
     <a href="/words/$word.getId()/definitions/new">Add a New Definition</a>
   </li>
   <li>
-    <a href="/words">Return to Word List</a>
+    <a href="/words" class="links text">Return to Word List</a>
   </li>
 </ul>

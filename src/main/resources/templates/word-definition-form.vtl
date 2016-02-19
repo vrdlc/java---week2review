@@ -1,15 +1,19 @@
-word-definition-form.vtl
+<div class="container">
+  <div class="jumbotron indexback">
+    <h2>Add a definition to $word.getDescription() </h2>
+  </div>
+</div>
 
-<h2>Add a definition to $word.getDescription() </h2>
 
 <form action="/definitions" method="post">
   <input id="wordId" name="wordId" type="hidden" value="$word.getId()">
 
   <div class="form-group">
-    <label for="description">Make</label>
+    <label for="description">Enter your definition:</label>
     <input id="description" name="description" type="text" class="form-control">
   </div>
 
   <button type="submit" class="btn btn-success">Add Definition</button>
 </form>
-<a href="/words">Return to Word List</a>
+
+<a href="/words" class="links text">Return to Word List</a>

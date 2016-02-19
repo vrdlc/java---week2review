@@ -1,3 +1,12 @@
+body {
+  background-color: #aea78a;
+}
+
 .links {
   list-style: none;
+  color: black;
+}
+
+a {
+  color: black;
 }
