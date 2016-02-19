@@ -4,10 +4,12 @@ public class Definition {
   private static ArrayList<Definition> definitions = new ArrayList<Definition>();
 
   private String mDefinition;
+  private int mId;
 
   public Definition(String definition) {
     mDefinition = definition;
     definitions.add(this);
+    mId = definitions.size();
   }
 
   public String getDefinition() {
@@ -16,5 +18,9 @@ public class Definition {
 
   public static ArrayList<Definition> all() {
     return definitions;
+  }
+
+  public int getId() {
+    return mId;
   }
 }

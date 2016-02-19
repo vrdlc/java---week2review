@@ -22,4 +22,10 @@ public class DefinitionTest {
     assertTrue(Definition.all().contains(firstDefinition));
     assertTrue(Definition.all().contains(secondDefinition));
   }
+
+  @Test
+  public void id_returnsDefinitionWithID_true() {
+    Definition myDefinition = new Definition("delicious");
+    assertEquals(Definition.all().size(), myDefinition.getId());
+  }
 }
