@@ -11,27 +11,20 @@ public class Word {
   private ArrayList<Definition> mDefinitions;
 
 
-  public Word(String description) { //IS THERE A BETTER NAME FOR WORD?
+  public Word(String description) {
     mDescription = description;
     words.add(this); //.add(this) IS PAIRED WITH .all()
     mId = words.size();
     mDefinitions = new ArrayList<Definition>();
   }
 
-  public String getDescription() { //WHY RETURN mDescription AND NOT description?
+  public String getDescription() {
     return mDescription;
   }
 
   public static ArrayList<Word> all() {
       return words;
   }
-
-  // public static ArrayList<Word> sort() {
-  //   Collections.sort(words);
-  //     for(Word counter: words) {
-  //       return words;
-  //   }
-  // }
 
   public int getId() {
     return mId;
