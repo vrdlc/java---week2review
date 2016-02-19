@@ -29,6 +29,13 @@ public class WordTest {
     assertEquals(Word.all().size(), myWord.getId());
   }
 
+  @Test
+  public void find_returnsMultipleWordsWithIDs_true() {
+    Word firstWord = new Word("fish");
+    Word secondWord = new Word("hat");
+    assertEquals(Word.find(secondWord.getId()), secondWord);
+  }
+
 /*
 @Test
 public void giveChange_25cents_1quarter() {
