@@ -23,6 +23,12 @@ public class WordTest {
     assertTrue(Word.all().contains(secondWord));
   }
 
+  @Test
+  public void id_WordInstantiatesWithID_true() {
+    Word myWord = new Word("fish");
+    assertEquals(Word.all().size(), myWord.getId());
+  }
+
 /*
 @Test
 public void giveChange_25cents_1quarter() {
