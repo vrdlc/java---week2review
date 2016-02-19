@@ -5,11 +5,23 @@ public class WordTest {
 
   @Test
   public void word_instantiatesCorrectly_true() {
-    Word myWord = new Word();
+    Word myWord = new Word("fish");
       assertEquals(true, myWord instanceof Word);
   }
 
+  @Test
+  public void word_instantiatesWithDescription_true() {
+    Word myWord = new Word("fish");
+    assertEquals("fish", myWord.getDescription());
+  }
 
+  // @Test
+  // public void all_returnsAllInstancesOfWord_true() {
+  //   Word firstWord = new Word("fish");
+  //   Word secondWord = new Word("hat");
+  //   assertTrue(Word.all().contains(firstWord));
+  //   assertTrue(Word.add().contains(secondWord));
+  // }
 
 /*
 @Test
