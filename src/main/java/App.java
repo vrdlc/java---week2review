@@ -1,4 +1,5 @@
 import java.util.HashMap;
+import java.util.ArrayList;
 import spark.ModelAndView;
 import spark.template.velocity.VelocityTemplateEngine;
 import static spark.Spark.*;
@@ -10,7 +11,7 @@ public class App {
 
     get("/", (request, response) -> {
       HashMap model = new HashMap();
-      model.put("template", "templates/input.vtl");
+      model.put("template", "templates/index.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
