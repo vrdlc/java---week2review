@@ -1,4 +1,4 @@
-# Word Puzzle Creator
+# Dictionary Creator
 #Java Week 2 Review
 #####for Epicodus
 ####V. Ramon de la Cruz
